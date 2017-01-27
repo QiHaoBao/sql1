@@ -1,0 +1,111 @@
+{
+  "processors": [
+    {
+      "cid": "c15",
+      "name": "Anomaly Calculation",
+      "link": "http://cmacws4.jpl.nasa.gov:8080/assets/html/anomaly.html",
+      "params": "http://cmda.jpl.nasa.gov:8080/assets/html/anomaly.html?model1=GFDL_CM3&var1=cl&pres1=500&model2=GFDL_ESM2G&var2=cct&pres2=-999999&purpose=Test%20to%20generate%20a%20data%20product%20for%20work%20flow&lonS=0&lonE=360&latS=-90&latE=90&RmeS=200001&RmeE=200512&tag=1484867643732&removeSeason=1&useVar2=0&useTime2=1&RmeS2=199001&RmeE2=200512",
+      "params_list": {
+        "model1": "GFDL_CM3",
+        "var1": "cl",
+        "pres1": "-500",
+        "model2": "GFDL_ESM2G",
+        "var2": "cct",
+        "pres2": "-999999",
+        "lonS": "0",
+        "lonE": "360",
+        "latS": "-90",
+        "latE": "-90",
+        "timeS": "200001",
+        "timeE": "200512",
+        "timeS2": "199001",
+        "timeE2": "200512",
+        "purpose": "Test%20to%20generate%20a%20data%20product%20for%20work%20flow",
+        "tag": "1484867643732",
+        "removeSeason": "1",
+        "useVar2": "0",
+        "useTime2": "1",
+        "Image": "http://cmda-test.jpl.nasa.gov:8090/static/anomaly/1484867643732/theMean.png",
+        "data_url": "http%3A//cmda-test.jpl.nasa.gov%3A8090/static/anomaly/1484867643732/data_anomaly.nc"
+      },
+      "x": 457.1875,
+      "y": 245,
+      "inputPort": {
+        "cid": "c16",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c18",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    },
+    {
+      "cid": "c64",
+      "name": "Total cloud fraction",
+      "link": "http://cmda.jpl.nasa.gov:8090/static/anomaly/1484867643732/data_anomaly.nc",
+      "params": "",
+      "x": 171.1875,
+      "y": 245,
+      "inputPort": {
+        "cid": "c65",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c67",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    },
+    {
+      "cid": "c94",
+      "name": "Time Series",
+      "link": "http://ec2-52-53-238-225.us-west-1.compute.amazonaws.com:8080/assets/html/timeSeries.html",
+      "params": "http://cmda.jpl.nasa.gov:8090/svc/RmeSeriesWorkFlow?purpose=test&scale=0&inputDataFile=http://cmda.jpl.nasa.gov:8090/static/anomaly/1484867643732/data_anomaly.nc",
+      "params_list": {
+        "purpose": "test",
+        "scale": 0,
+        "inputDataFile": "http://cmda.jpl.nasa.gov:8090/static/anomaly/1484867643732/data_anomaly.nc"
+      },
+      "x": 742.1875,
+      "y": 245,
+      "inputPort": {
+        "cid": "c95",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c97",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    }
+  ],
+  "datalinks": [
+    {
+      "sender": {
+        "processor": "c64",
+        "port": "c67"
+      },
+      "receiver": {
+        "processor": "c15",
+        "port": "c16"
+      }
+    },
+    {
+      "sender": {
+        "processor": "c15",
+        "port": "c18"
+      },
+      "receiver": {
+        "processor": "c94",
+        "port": "c95"
+      }
+    }
+  ]
+}

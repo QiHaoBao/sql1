@@ -1,0 +1,75 @@
+{
+  "processors": [
+    {
+      "cid": "c15",
+      "name": "Anomaly Calculation",
+      "link": "http://cmda.jpl.nasa.gov:8080/assets/html/anomaly.html?model1=NCAR_CAM5&var1=pr&pres1=-999999&model2=NCAR_CAM5&var2=pr&pres2=-999999&purpose=Test%20to%20generate%20a%20data%20product%20for%20work%20flow&lonS=0&lonE=360&latS=-90&latE=90&timeS=199711&timeE=199802&tag=1484872697805&removeSeason=1&useVar2=1&useTime2=1&timeS2=199501&timeE2=200512",
+      "params_list": {
+        "model1": "NCAR_CAM5",
+        "var1": "pr",
+        "pres1": "-999999",
+        "model2": "NCAR_CAM5",
+        "var2": "pr",
+        "pres2": "-999999",
+        "lonS": "0",
+        "lonE": "360",
+        "latS": "-90",
+        "latE": "-90",
+        "timeS": "199711",
+        "timeE": "199802",
+        "timeS2": "199501",
+        "timeE2": "200512",
+        "purpose": "Test%20to%20generate%20a%20data%20product%20for%20work%20flow",
+        "tag": "1484872697805",
+        "removeSeason": "1",
+        "useVar2": "1",
+        "useTime2": "1",
+        "Image": "http://cmda-test.jpl.nasa.gov:8090/static/anomaly/1484872697805/theMean.png",
+        "data_url": "http%3A//cmda-test.jpl.nasa.gov%3A8090/static/anomaly/1484872697805/data_anomaly.nc"
+      },
+      "x": 466.1875,
+      "y": 256,
+      "inputPort": {
+        "cid": "c16",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c18",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    },
+    {
+      "cid": "c288",
+      "name": "Map View",
+      "link": "http://cmda.jpl.nasa.gov:8080/assets/html/mapView.html&userid=33&scale=0&purpose=test",
+      "x": 809.1875,
+      "y": 254,
+      "inputPort": {
+        "cid": "c289",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c291",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    }
+  ],
+  "datalinks": [
+    {
+      "sender": {
+        "processor": "c15",
+        "port": "c18"
+      },
+      "receiver": {
+        "processor": "c288",
+        "port": "c289"
+      }
+    }
+  ]
+}

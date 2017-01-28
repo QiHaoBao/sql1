@@ -64,13 +64,7 @@
     {
       "cid": "c94",
       "name": "Time Series",
-      "link": "http://ec2-52-53-238-225.us-west-1.compute.amazonaws.com:8080/assets/html/timeSeries.html",
-      "params": "http://cmda.jpl.nasa.gov:8090/svc/RmeSeriesWorkFlow?purpose=test&scale=0&inputDataFile=http://cmda.jpl.nasa.gov:8090/static/anomaly/1484867643732/data_anomaly.nc",
-      "params_list": {
-        "purpose": "test",
-        "scale": 0,
-        "inputDataFile": "http://cmda.jpl.nasa.gov:8090/static/anomaly/1484867643732/data_anomaly.nc"
-      },
+      "link": "http://cmda.jpl.nasa.gov:8080/assets/html/timeSeries.html&userid=33&scale=0&purpose=test",
       "x": 742.1875,
       "y": 245,
       "inputPort": {

@@ -1,0 +1,189 @@
+{
+  "processors": [
+    {
+      "cid": "c15",
+      "name": "Anomaly Calculation",
+      "link": "http://cmda.jpl.nasa.gov:8080/assets/html/anomaly.html?model1=GFDL_CM3&var1=ts&pres1=-999999&model2=GFDL_ESM2G&var2=cct&pres2=-999999&purpose=Test%20to%20generate%20a%20data%20product%20for%20work%20flow&lonS=0&lonE=360&latS=-90&latE=90&timeS=199401&timeE=200812&tag=1484867746959&removeSeason=1&useVar2=0&useTime2=0&timeS2=199001&timeE2=200512",
+      "params_list": {
+        "model1": "GFDL_CM3",
+        "var1": "cl",
+        "pres1": "-500",
+        "model2": "GFDL_ESM2G",
+        "var2": "cct",
+        "pres2": "-999999",
+        "lonS": "0",
+        "lonE": "360",
+        "latS": "-90",
+        "latE": "-90",
+        "timeS": "200001",
+        "timeE": "200512",
+        "timeS2": "199001",
+        "timeE2": "200512",
+        "purpose": "Test%20to%20generate%20a%20data%20product%20for%20work%20flow",
+        "tag": "1484867643732",
+        "removeSeason": "1",
+        "useVar2": "0",
+        "useTime2": "0",
+        "Image": "http://cmda-test.jpl.nasa.gov:8090/static/anomaly/1484867746959/theMean.png",
+        "data_url": "http%3A//cmda-test.jpl.nasa.gov%3A8090/static/anomaly/1484867746959/data_anomaly.nc"
+      },
+      "x": 466.1875,
+      "y": 256,
+      "inputPort": {
+        "cid": "c16",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c18",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    },
+    {
+      "cid": "c36",
+      "name": "Anomaly Calculation",
+      "link": "http://cmda.jpl.nasa.gov:8080/assets/html/anomaly.html?model1=GFDL_CM3&var1=ta&pres1=700&model2=GFDL_ESM2G&var2=cct&pres2=-999999&purpose=Test%20to%20generate%20a%20data%20product%20for%20work%20flow&lonS=0&lonE=360&latS=-90&latE=90&timeS=199401&timeE=200812&tag=1484869164958&removeSeason=1&useVar2=0&useTime2=0&timeS2=199001&timeE2=200512",
+      "params": {
+        "model1": "GFDL_CM3",
+        "var1": "ta",
+        "pres1": "700",
+        "model2": "GFDL_ESM2G",
+        "var2": "cct",
+        "pres2": "-999999",
+        "lonS": "0",
+        "lonE": "360",
+        "latS": "-90",
+        "latE": "-90",
+        "timeS": "199401",
+        "timeE": "200812",
+        "timeS2": "199001",
+        "timeE2": "200512",
+        "purpose": "Test%20to%20generate%20a%20data%20product%20for%20work%20flow",
+        "tag": "1484869164958",
+        "removeSeason": "1",
+        "useVar2": "0",
+        "useTime2": "0",
+        "Image": "http://cmda-test.jpl.nasa.gov:8090/static/anomaly/1484869164958/theMean.png",
+        "data_url": "http%3A//cmda-test.jpl.nasa.gov%3A8090/static/anomaly/1484869164958/data_anomaly.nc"
+      },
+      "x": 473.1875,
+      "y": 384,
+      "inputPort": {
+        "cid": "c37",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c39",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    },
+    {
+      "cid": "c57",
+      "name": "Anomaly Calculation",
+      "link": "http://cmda.jpl.nasa.gov:8080/assets/html/anomaly.html?model1=GFDL_CM3&var1=ta&pres1=200&model2=GFDL_ESM2G&var2=cct&pres2=-999999&purpose=Test%20to%20generate%20a%20data%20product%20for%20work%20flow&lonS=0&lonE=360&latS=-90&latE=90&timeS=199401&timeE=200812&tag=1484869581331&removeSeason=1&useVar2=0&useTime2=0&timeS2=199001&timeE2=200512",
+      "params": {
+        "model1": "GFDL_CM3",
+        "var1": "ta",
+        "pres1": "200",
+        "model2": "GFDL_ESM2G",
+        "var2": "cct",
+        "pres2": "-999999",
+        "lonS": "0",
+        "lonE": "360",
+        "latS": "-90",
+        "latE": "-90",
+        "timeS": "199401",
+        "timeE": "200812",
+        "timeS2": "199001",
+        "timeE2": "200512",
+        "purpose": "Test%20to%20generate%20a%20data%20product%20for%20work%20flow",
+        "tag": "1484869581331",
+        "removeSeason": "1",
+        "useVar2": "0",
+        "useTime2": "0",
+        "Image": "http://cmda-test.jpl.nasa.gov:8090/static/anomaly/1484869581331/theMean.png",
+        "data_url": "http%3A//cmda-test.jpl.nasa.gov%3A8090/static/anomaly/1484869581331/data_anomaly.nc"
+      },
+      "x": 474.1875,
+      "y": 512,
+      "inputPort": {
+        "cid": "c58",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c60",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    },
+    {
+      "cid": "c219",
+      "name": "Time Series",
+      "link": "http://cmda.jpl.nasa.gov:8080/assets/html/timeSeries.html&userid=33&scale=0&purpose=test",
+      "x": 817.1875,
+      "y": 386,
+      "ports": [
+        {
+          "cid": "c247",
+          "type": "input",
+          "name": "in2"
+        },
+        {
+          "cid": "c252",
+          "type": "input",
+          "name": "in3"
+        }
+      ],
+      "inputPort": {
+        "cid": "c220",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c222",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    }
+  ],
+  "datalinks": [
+    {
+      "sender": {
+        "processor": "c15",
+        "port": "c18"
+      },
+      "receiver": {
+        "processor": "c219",
+        "port": "c220"
+      }
+    },
+    {
+      "sender": {
+        "processor": "c36",
+        "port": "c39"
+      },
+      "receiver": {
+        "processor": "c219",
+        "port": "c247"
+      }
+    },
+    {
+      "sender": {
+        "processor": "c57",
+        "port": "c60"
+      },
+      "receiver": {
+        "processor": "c219",
+        "port": "c252"
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "processors": [
+    {
+      "cid": "c15",
+      "name": "Anomaly Calculation",
+      "link": "http://cmda.jpl.nasa.gov:8080/assets/html/anomaly.html?model1=ECMWF_interim&var1=tos&pres1=-999999&model2=ECMWF_interim&var2=tos&pres2=-999999&purpose=Test%20to%20generate%20a%20data%20product%20for%20work%20flow&lonS=0&lonE=360&latS=-90&latE=90&timeS=199001&timeE=200012&tag=1484871527871&removeSeason=1&useVar2=1&useTime2=1&timeS2=199501&timeE2=201012",
+      "params_list": {
+        "model1": "ECMWF_interim",
+        "var1": "tos",
+        "pres1": "-999999",
+        "model2": "ECMWF_interim",
+        "var2": "tos",
+        "pres2": "-999999",
+        "lonS": "0",
+        "lonE": "360",
+        "latS": "-90",
+        "latE": "-90",
+        "timeS": "199001",
+        "timeE": "200012",
+        "timeS2": "198001",
+        "timeE2": "201012",
+        "purpose": "Test%20to%20generate%20a%20data%20product%20for%20work%20flow",
+        "tag": "1484871527871",
+        "removeSeason": "1",
+        "useVar2": "1",
+        "useTime2": "1",
+        "Image": "http://cmda-test.jpl.nasa.gov:8090/static/anomaly/1484871527871/theMean.png",
+        "data_url": "http%3A//cmda-test.jpl.nasa.gov%3A8090/static/anomaly/1484871527871/data_anomaly.nc"
+      },
+      "x": 451.1875,
+      "y": 334,
+      "ports": [],
+      "inputPort": {
+        "cid": "c16",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c18",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    },
+    {
+      "cid": "c288",
+      "name": "Map View",
+      "link": "http://cmda.jpl.nasa.gov:8080/assets/html/mapView.html&userid=33&scale=0&purpose=test",
+      "x": 796.1875,
+      "y": 244,
+      "inputPort": {
+        "cid": "c289",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c291",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    },
+    {
+      "cid": "c316",
+      "name": "Time Series",
+      "link": "http://cmda.jpl.nasa.gov:8080/assets/html/timeSeries.html&userid=33&scale=0&purpose=test",
+      "x": 802.1875,
+      "y": 412,
+      "inputPort": {
+        "cid": "c317",
+        "type": "input",
+        "name": "in"
+      },
+      "outputPort": {
+        "cid": "c319",
+        "type": "output",
+        "name": "out"
+      },
+      "activity": "function () { return null; }"
+    }
+  ],
+  "datalinks": [
+    {
+      "sender": {
+        "processor": "c15",
+        "port": "c18"
+      },
+      "receiver": {
+        "processor": "c288",
+        "port": "c289"
+      }
+    },
+    {
+      "sender": {
+        "processor": "c15",
+        "port": "c18"
+      },
+      "receiver": {
+        "processor": "c316",
+        "port": "c317"
+      }
+    }
+  ]
+}
